@@ -67,14 +67,8 @@ Every genre have a specific value which you can put in your Get Request query. t
 
 ### GET /manga_info
 
-#### Query Parameters & Headers
+#### Headers
 
-manga id, host name, url can be accessed by making `GET /manga_list` request. [see examples below](#get-manga_list-1)
-
-| Parameter            | Description             |
-| :------------------- | :---------------------- |
-| `id` (string)        | manga id                |
-| `host-name` (string) | manga website host name |
 
 | Header         | Description |
 | :------------- | :---------- |
@@ -82,7 +76,7 @@ manga id, host name, url can be accessed by making `GET /manga_list` request. [s
 
 ### GET /read_manga
 
-#### Query Parameters & Headers
+#### Headers
 
 chapter url can be accessed by making `GET /manga_info` request. [see exmaples below](#get-manga_info-1)
 
@@ -96,12 +90,12 @@ chapter url can be accessed by making `GET /manga_info` request. [see exmaples b
 
 #### Example 1:
 
-This query will filter result by status only.
+This query will filter results by genre
 
 Example:
 
 ```command
-curl 'http://localhost:3000/manga_list?sts=ongoing'
+curl 'http://localhost:3000/manga_list?inGenre=_2_'
 ```
 
 Response body:
@@ -112,31 +106,15 @@ Response body:
         "data": [
             {
                 "index": 0,
-                "id": "manga-jn987096",
-                "title": "Hell Mode: Yarikomi Suki No Gamer Wa Hai Settei No Isekai De Musou Suru",
-                "chapter": "Chapter 14: Talent",
-                "img": "https://avt.mkklcdnv6temp.com/33/n/22-1604080648.jpg",
-                "host_name": "manganato.com",
-                "src": "https://manganato.com/manga-jn987096",
-                "synopsis": "\"Will you be summoned to the world of a never-ending game?\" One day, I was looking for a new game, when I suddenly saw that ad. After choosing the most difficult mode of the game, \"hell mode\", I was suddenly reincarnated into a new world as a farmhand.  As a boy named Allen, I started my journey in another world with the highest difficulty, overcoming all challenges to ach",
-                "views": "6,330,209",
-                "uploadedDate": "Dec 04,21",
-                "authors": "Tetta Enji,Hamuo",
-                "rating": "4.8"
+                "title": "Ancient Godly Monarch (Novel)",
+                "img": "https://img.novelcool.com/logo/201807/b7/Ancient_Godly_Monarch7127.jpg",
+                "src": "https://br.novelcool.com/novel/Ancient_Godly_Monarch_Novel.html",
             },
             {
                 "index": 1,
-                "id": "manga-cb980036",
                 "title": "The World Of Otome Games Is Tough For Mobs",
-                "chapter": "Chapter 38",
                 "img": "https://avt.mkklcdnv6temp.com/13/q/17-1583495755.jpg",
-                "host_name": "readmanganato.com",
                 "src": "https://readmanganato.com/manga-cb980036",
-                "synopsis": "Leon, a former Japanese worker, was reincarnated into an “otome game” world, and despaired at how it was a world where females hold dominance over males. It was as if men were just livestock that served as stepping stones for females in this world. The only exceptions were the game’s romantic targets, a group of handsome men led by the crown prince.In these bizarre",
-                "views": "20,749,396",
-                "uploadedDate": "Dec 04,21",
-                "authors": "Yomu Mishima, Jun Shiosato",
-                "rating": "4.8"
             },
             {...},
             ...
@@ -144,37 +122,6 @@ Response body:
     }
 ]
 ```
-
-#### Example 2:
-
-This query will exclude slice of life and sports genre and filter by a completed manga and the manga title `one piece`.
-
-Example:
-
-```
-curl 'http://localhost:3000/manga_list?sts=completed&keyw=one%20piece'
-```
-
-Response body:
-
-```json
-[
-    {
-        "info": {
-            "keyword": "one piece",
-            "filter_status": "completed",
-            "included_genres": "",
-            "excluded_genres": "",
-            "order_by": "",
-            "current_page": 1,
-            "totalPages": ""
-        },
-        "data": []
-    }
-]
-```
-
-response is empty because one piece is not completed yet :).
 
 ### GET /manga_info
 
