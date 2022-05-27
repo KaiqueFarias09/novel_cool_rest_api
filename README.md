@@ -1,6 +1,6 @@
-# NovelCool API
+# Novel Cool API
 
-This api is based on [manganato](https://manganato.com/) manga reading api to give you a better experience for your app.
+This api is based on [novel cool](https://www.novelcool.com/) manga reading api to give you a better experience for your app.
 
 ## Table of Contents
 
@@ -34,7 +34,6 @@ Parameters can be used to query, filter and control the results returned by the 
 | `sts` (string)     | filter results by status. default: `Ongoing and Complete`                                                                                                                                                                                                      |
 | `orby` (string)    | filter results by `Latest updates, top view, new manga, A-Z`. default: `Latest updates`                                                                                                                                                                        |
 | `inGenre` (string) | filter results by genres. all genres are included by default. for example: If you include Historical , it will filter only mangas with Historical genre. (You can include multiple genres). for example: `inGenre=_15_` **NOTE: Genres list available below.** |
-| `exGenre` (string) | If you include Comedy, Romance but exclude Ecchi, it will filter all mangas with Comedy and Romance but Ecchi. for example: `inGenre=_6_27_&exGenre=_11_` **NOTE: Genres list available below.**                                                               |
 | `keyw` (string)    | filter results by manga name. for example: `keyw=one piece`                                                                                                                                                                                                    |
 | `page` (int)       | by default page starts from 1. pages limit may vary                                                                                                                                                                                                            |
 
