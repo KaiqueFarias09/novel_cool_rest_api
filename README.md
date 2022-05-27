@@ -31,7 +31,6 @@ Parameters can be used to query, filter and control the results returned by the 
 
 | Parameter          | Description                                                                                                                                                                                                                                                    |
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sts` (string)     | filter results by status. default: `Ongoing and Complete`                                                                                                                                                                                                      |
 | `orby` (string)    | filter results by `Latest updates, top view, new manga, A-Z`. default: `Latest updates`                                                                                                                                                                        |
 | `inGenre` (string) | filter results by genres. all genres are included by default. for example: If you include Historical , it will filter only mangas with Historical genre. (You can include multiple genres). for example: `inGenre=_15_` **NOTE: Genres list available below.** |
 | `keyw` (string)    | filter results by manga name. for example: `keyw=one piece`                                                                                                                                                                                                    |
@@ -44,45 +43,27 @@ Every genre have a specific value which you can put in your Get Request query. t
 | Genre         | Value |
 | :------------ | :---- |
 | Action        | 2     |
-| Adult         | 3     |
 | Adventure     | 4     |
-| Comedy        | 6     |
-| Cooking       | 7     |
-| Doujinshi     | 9     |
-| Drama         | 10    |
 | Ecchi         | 11    |
-| Fantasy       | 12    |
-| Gender Bender | 13    |
-| Harem         | 14    |
-| Historical    | 15    |
 | Horror        | 16    |
-| Isekai        | 45    |
-| Josei         | 17    |
-| Manhua        | 44    |
-| Manhwa        | 43    |
-| Martial arts  | 19    |
 | Mature        | 20    |
-| Mecha         | 21    |
-| Medical       | 22    |
-| Mystery       | 24    |
-| One shot      | 25    |
-| Psychological | 26    |
 | Romance       | 27    |
-| School life   | 28    |
-| Sci fi        | 29    |
-| Seinen        | 30    |
 | Shoujo        | 31    |
-| Shoujo ai     | 32    |
 | Shounen       | 33    |
-| Shounen ai    | 34    |
-| Slice of life | 35    |
-| Smut          | 36    |
-| Sports        | 37    |
-| Supernatural  | 38    |
-| Tragedy       | 39    |
 | Webtoons      | 40    |
 | Yaoi          | 41    |
-| Yuri          | 42    |
+| Manhwa        | 43    |
+| Manhua        | 44    |
+| RecentDrama   | 50    |
+| RecentAdventure | 51    |
+| RecentShounen | 52    |
+| RecentIsekai  | 53    |
+| RecentHorror  | 54    |
+| RecentManhwa  | 55    |
+| RecentSuperPowers | 56    |
+| RecentDemons  | 57    |
+| RecentGames   | 58    |
+| RecentSeinen  | 59    |
 
 ### GET /manga_info
 
@@ -128,16 +109,6 @@ Response body:
 ```json
 [
     {
-        "info": {
-            "keyword": "",
-            "filter_status": "ongoing",
-            "included_genres": "",
-            "excluded_genres": "",
-            "order_by": "",
-            "current_page": 1,
-            "totalStories": "20,846",
-            "totalPages": "869"
-        },
         "data": [
             {
                 "index": 0,
