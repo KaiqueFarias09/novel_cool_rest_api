@@ -4,29 +4,8 @@ This api is based on [manganato](https://manganato.com/) manga reading api to gi
 
 ## Table of Contents
 
-**[Getting Started](#getting-started)**<br>
 **[Api Walkthrough](#api-walkthrough)**<br>
 **[Request & Response Examples](#request--response-examples)**<br>
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Cloning
-
-```command
-git clone https://github.com/riimuru/Mangato-api.git
-cd mangato-api
-```
-
-### Installing
-
-Install the packages and run the server.
-
-```command
-npm install
-npm start
-```
 
 ## API Walkthrough
 
@@ -36,26 +15,12 @@ npm start
 
 ```json
 [
-        "info": {
-            "keyword": ...,
-            "filter_status": ...,
-             ...
-        },
         "data": [
             {...},
             {...},
             ...
        ]
 ]
-```
-
-#### Error format
-
-```json
-{
-    "status": 404,
-    "error": "Not Found"
-}
 ```
 
 ### GET /manga_list
